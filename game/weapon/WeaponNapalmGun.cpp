@@ -400,7 +400,7 @@ stateResult_t WeaponNapalmGun::State_Fire( const stateParms_t& parms ) {
 				//fireHeld = true;
 			} else {
 				nextAttackTime = gameLocal.time + (fireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
-				Attack ( false, 1, spread, 0, 1.0f );
+				Attack ( false, 10, 8, 0, 2.0f );
 
 				int animNum = viewModel->GetAnimator()->GetAnim ( "fire" );
 				if ( animNum ) {
